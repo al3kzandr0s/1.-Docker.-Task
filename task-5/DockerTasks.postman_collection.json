@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "24a9f3c9-3fb2-466f-aa3b-1dd94222e2c2",
+		"name": "DockerTasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31408415"
+	},
+	"item": [
+		{
+			"name": "Check Lite Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/lite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"lite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check first Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/json/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"json",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n    \"id\": 3,\r\n    \"title\": \"titletitle\",\r\n    \"author\": \"authorauthor\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/json/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"json",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

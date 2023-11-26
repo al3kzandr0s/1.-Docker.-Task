@@ -1,0 +1,11 @@
+version: '3'
+services:
+  json-server:
+    image: node
+    user: "node"
+    working_dir: /home/node/app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./static:/home/node/app
+    command: bash -c "npm install && npm start"
